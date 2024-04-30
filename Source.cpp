@@ -6,7 +6,7 @@ using namespace std;
 using namespace sf;
 Font Satoshi_Black, Satoshi_BlackItalic, Satoshi_Bold, Satoshi_BoldItalic, Satoshi_Italic, Satoshi_Light, Satoshi_LightItalic, Satoshi_Medium, Satoshi_MediumItalic, Satoshi_Regular, RobotoCondensed_Bold, good_Times, CinzelDecorative_Bold, CinzelDecorative_Black;
 Texture headerTexture, closeTexture, mininmizeTexture, optionsTexture, backgroundTexture, bigButtonTexture, smallButtonTexture, darkBackgroundTexture, darkBackgroundLargeTexture, darkBackgroundSmallTexture, enterValuesBackgroundTexture;
-RenderWindow window(VideoMode(1920,1080) ,"Sign in", Style::Default);
+RenderWindow window(VideoMode(1920,1080) ,"Sign in", Style::Fullscreen);
 
 
 struct Header {
@@ -367,13 +367,15 @@ void btnInitializer(button button[], int arrSize) {
         button[i].btnText.setFont(Satoshi_Black); 
         button[i].btnText.setFillColor(Color::White);
         button[i].btnSprite.setPosition(80, 500 + ((i) * 115));
-        button[i].btnSprite.setScale(.136, .11);
+        button[i].btnSprite.setScale(.140, .15);
         button[i].btnText.setString(btnstring[i]);
+        button[i].btnText.setCharacterSize(35);
+
     }
-        button[0].btnText.setPosition(button[0].btnSprite.getPosition().x +80, button[0].btnSprite.getPosition().y+10);
-        button[1].btnText.setPosition(button[1].btnSprite.getPosition().x +80, button[1].btnSprite.getPosition().y+10);
-        button[2].btnText.setPosition(button[2].btnSprite.getPosition().x +80, button[2].btnSprite.getPosition().y+10);
-        button[3].btnText.setPosition(button[3].btnSprite.getPosition().x +80, button[3].btnSprite.getPosition().y+10);
+        button[0].btnText.setPosition(button[0].btnSprite.getPosition().x +100, button[0].btnSprite.getPosition().y+25);
+        button[1].btnText.setPosition(button[1].btnSprite.getPosition().x +90, button[1].btnSprite.getPosition().y+20);
+        button[2].btnText.setPosition(button[2].btnSprite.getPosition().x +100, button[2].btnSprite.getPosition().y+25);
+        button[3].btnText.setPosition(button[3].btnSprite.getPosition().x +100, button[3].btnSprite.getPosition().y+25);
 
     
 }
